@@ -1,5 +1,4 @@
 <?php require_once "authorizer.php"; ?>
-
 <body class=" font-inter dashcode-app" id="body_class">
   <main class="app-wrapper">
     <!-- BEGIN: Sidebar -->
