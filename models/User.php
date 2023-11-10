@@ -69,5 +69,20 @@
             }
             return $name;
         }
+
+        public function setTransactionPin(string $id, string $pin) : bool {
+            $condition = [
+                "id"=> $id
+            ];
+            $values = [
+                "transact_pin"=> $pin
+            ];
+            $pinSet = $this->conn->update($this->table->users, $values, $condition);
+            if($pinSet) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>

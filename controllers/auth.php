@@ -31,8 +31,8 @@
             $userCreated = $user->createUser($userData);
             
             if($userCreated AND isset($_SESSION['user_id'])) {
-                // redirect user to the dashboard
-                header("location: ".VIEW_DIR.'dashboard');
+                // redirect user to change the default transaction pin
+                header("location: ".VIEW_DIR.'set-pin');
                 exit;
             } else {
                 // log feedback

@@ -10,5 +10,8 @@
     $userId = $_SESSION['user_id'];
     $userDetails = $user->getUserInfo($userId);
 
-    print_r($userDetails);
+    if($userDetails['transact_pin'] == "0000") {
+        header('location: '.VIEW_DIR.'set-pin');
+        exit;
+    }
 ?>
