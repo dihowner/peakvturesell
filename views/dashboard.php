@@ -119,9 +119,9 @@
                                         <div class="swiper-slide">
                                             <div class="from-[#1EABEC] to-primary-500  h-[200px] bg-gradient-to-r relative rounded-md z-[1] p-4 text-white">
                                             <div class="overlay absolute left-0 top-0 h-full w-full -z-[1]">
-                                                <img src="assets/images/all-img/visa-card-bg.png" alt="" class="h-full w-full object-cover">
+                                                <img src="<?php echo BASE_URL?>assets/images/all-img/visa-card-bg.png" alt="" class="h-full w-full object-cover">
                                             </div>
-                                            <img src="assets/images/logo/visa.svg" alt="">
+                                            <img src="<?php echo BASE_URL?>assets/images/logo/visa.svg" alt="">
                                             <div class="mt-[18px] font-semibold text-lg mb-[17px]">
                                                 **** **** **** 3945
                                             </div>
@@ -136,9 +136,9 @@
                                         <div class="swiper-slide">
                                             <div class="from-[#4C33F7] to-[#801FE0]  h-[200px] bg-gradient-to-r relative rounded-md z-[1] p-4 text-white">
                                             <div class="overlay absolute left-0 top-0 h-full w-full -z-[1]">
-                                                <img src="assets/images/all-img/visa-card-bg.png" alt="" class="h-full w-full object-cover">
+                                                <img src="<?php echo BASE_URL?>assets/images/all-img/visa-card-bg.png" alt="" class="h-full w-full object-cover">
                                             </div>
-                                            <img src="assets/images/logo/visa.svg" alt="">
+                                            <img src="<?php echo BASE_URL?>assets/images/logo/visa.svg" alt="">
                                             <div class="mt-[18px] font-semibold text-lg mb-[17px]">
                                                 **** **** **** 3945
                                             </div>
@@ -153,9 +153,9 @@
                                         <div class="swiper-slide">
                                             <div class="from-[#FF9838] to-[#008773] h-[200px] bg-gradient-to-r relative rounded-md z-[1] p-4 text-white">
                                             <div class="overlay absolute left-0 top-0 h-full w-full -z-[1]">
-                                                <img src="assets/images/all-img/visa-card-bg.png" alt="" class="h-full w-full object-cover">
+                                                <img src="<?php echo BASE_URL?>assets/images/all-img/visa-card-bg.png" alt="" class="h-full w-full object-cover">
                                             </div>
-                                            <img src="assets/images/logo/visa.svg" alt="">
+                                            <img src="<?php echo BASE_URL?>assets/images/logo/visa.svg" alt="">
                                             <div class="mt-[18px] font-semibold text-lg mb-[17px]">
                                                 **** **** **** 3945
                                             </div>
@@ -315,7 +315,7 @@
                                                 <td class="table-td">
                                                     <span class="flex">
                                                         <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-                                                            <img src="assets/images/all-img/customer_1.png" alt="1" class="object-cover w-full h-full rounded-full">
+                                                            <img src="<?php echo BASE_URL?>assets/images/all-img/customer_1.png" alt="1" class="object-cover w-full h-full rounded-full">
                                                         </span>
                                                     <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Jenny Wilson</span>
                                                     </span>
@@ -371,7 +371,7 @@
                                                 <td class="table-td">
                                                     <span class="flex">
                                                         <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-                                                            <img src="assets/images/all-img/customer_1.png" alt="2" class="object-cover w-full h-full rounded-full">
+                                                            <img src="<?php echo BASE_URL?>assets/images/all-img/customer_1.png" alt="2" class="object-cover w-full h-full rounded-full">
                                                         </span>
                                                     <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Jenny Wilson</span>
                                                     </span>
@@ -427,7 +427,7 @@
                                                 <td class="table-td">
                                                     <span class="flex">
                                                         <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-                                                            <img src="assets/images/all-img/customer_1.png" alt="3" class="object-cover w-full h-full rounded-full">
+                                                            <img src="<?php echo BASE_URL?>assets/images/all-img/customer_1.png" alt="3" class="object-cover w-full h-full rounded-full">
                                                         </span>
                                                     <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Jenny Wilson</span>
                                                     </span>

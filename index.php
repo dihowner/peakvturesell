@@ -4,12 +4,12 @@
 ?>
 
     <body class="font-inter skin-default">
-        <div class="loginwrapper bg-cover bg-no-repeat bg-center" style="background-image: url(assets/images/all-img/page-bg.png);">
+        <div class="loginwrapper bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo BASE_URL?>assets/images/all-img/page-bg.png);">
             <div class="lg-inner-column">
                 <div class="left-columns lg:w-1/2 lg:block hidden">
                     <div class="logo-box-3">
                         <a href="index.html" class="">
-                            <img src="assets/images/logo/logo-white.svg" alt="Brand Logo">
+                            <img src="<?php echo BASE_URL?>assets/images/logo/logo-white.svg" alt="Brand Logo">
                         </a>
                     </div>
                 </div>
@@ -17,8 +17,8 @@
                     <div class="auth-box-3">
                         <div class="mobile-logo text-center mb-6 lg:hidden block">
                             <a href="index.html">
-                                <img src="assets/images/logo/logo.svg" alt="Brand Logo Mobile" class="mb-10 dark_logo">
-                                <img src="assets/images/logo/logo-white.svg" alt="Brand Logo Mobile" class="mb-10 white_logo">
+                                <img src="<?php echo BASE_URL?>assets/images/logo/logo.svg" alt="Brand Logo Mobile" class="mb-10 dark_logo">
+                                <img src="<?php echo BASE_URL?>assets/images/logo/logo-white.svg" alt="Brand Logo Mobile" class="mb-10 white_logo">
                             </a>
                         </div>
                         <div class="text-center 2xl:mb-10 mb-5">
