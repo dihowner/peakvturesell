@@ -1,4 +1,21 @@
-<?php require_once "authorizer.php"; ?>
+<?php 
+    require "../includes/config.php";
+    include_once LAYOUT_DIR.'head.php';
+
+    if(!isset($_SESSION['user_id'])) {
+        header('location: '.BASE_URL_SIGNIN);
+        exit;
+    }
+
+    $userId = $_SESSION['user_id'];
+    $userDetails = $user->getUserInfo($userId);
+
+    if($userDetails['transact_pin'] != "0000") {
+        header('location: '.VIEW_DIR.'dashboard');
+        exit;
+    }
+?>
+
 <body class=" font-inter dashcode-app" id="body_class">
   <main class="app-wrapper">
     <!-- BEGIN: Sidebar -->
@@ -21,14 +38,15 @@
                     </a>
                   </li>
                   <li class="inline-block relative text-sm text-primary-500 font-Inter ">
-                    Account
+                    Settings
                     <iconify-icon icon="heroicons-outline:chevron-right" class="relative top-[3px] text-slate-500 rtl:rotate-180"></iconify-icon>
                   </li>
                   <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
-                    Profile</li>
+                    Set Pin</li>
                 </ul>
               </div>
-              <!-- END: BreadCrumb -->
+
+              <!-- Profile page -->
               <div class="space-y-5 profile-page">
                 <div class="profiel-wrap px-[35px] pb-10 md:pt-[84px] pt-10 rounded-lg bg-white dark:bg-slate-800 lg:flex lg:space-y-0
                 space-y-6 justify-between items-end relative z-[1]">
@@ -154,13 +172,67 @@
                   </div>
                 </div>
               </div>
+              
+              <!-- Form Modal Area Start -->
+              <div id="form-modal" aria-labelledby="form-modal" aria-modal="true" role="dialog" tabindex="-1" class="modal fade show fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40 backdrop-filter backdrop-blur-sm backdrop-brightness-10" style="display: block;">      
+                <div class="modal-dialog top-1/2 !-translate-y-1/2 relative w-auto pointer-events-none">
+                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                        <div class="relative w-full h-full max-w-xl md:h-auto">
+                            <div class="relative bg-white rounded-lg shadow dark:bg-slate-700">
+                                <!-- Modal header -->
+                                <div class="flex flex-col justify-between p-5 border-b rounded-t dark:border-slate-600 bg-black-500">
+                                  <h3 class="text-xl font-medium text-white dark:text-white capitalize">
+                                      Set Transaction Pin
+                                  </h3>
+                                  <p class="text-sm font-medium text-white dark:text-white">
+                                      Please enter a 4 digit pin that will be used for your transactions.
+                                  </p>
+                                </div>
+                                <!-- Modal body -->
+                                <div>
+                                  <!-- Feedback and response messages -->
+                                  <div class="w-full d-flex mx-auto mb-2 justify-content-center relative">
+                                      <?php echo errorMessage(); echo successMessage(); ?>
+                                  </div>
+                                  
 
+                                  <!-- Collect pin form -->
+                                  <form id="typeValidation" method="post" action="<?php echo CONTROLLER_DIR ?>updateAuth">
+                                      <div class="p-6 space-y-6">
+                                          <div class="input-group">
+                                              <label for="defaultPin" class="form-label text-sm font-Inter font-normal text-slate-900 block">Default Pin</label>
+                                              <input id="defaultPin" type="text" name="defaultPin" class="text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 pr-9 focus:!outline-none
+                                                  focus:!ring-0 border !border-slate-400 rounded-md mt-2" value="0000" disabled>                                        
+                                          </div>
+                                          <div class="input-group">
+                                              <label for="newPin" class="form-label text-sm font-Inter font-normal text-slate-900 block">New Pin:</label>
+                                              <div class="relative" id="passwordInputField">
+                                                  <input id="newPin" type="password" inputmode="numeric"  name="newPin" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 focus:!outline-none 
+                                                      focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Enter your new pin" autocomplete="off">
+                                                  <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                                      <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off">HE</iconify-icon>
+                                                      <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
+                                                  </span>
+                                              </div>
+                                          </div>                                     
+                                      </div>
+                                      <!-- Modal footer -->
+                                      <div class="flex items-center justify-end p-6 space-x-2 border-t border-slate-200 rounded-b dark:border-slate-600">
+                                      <button type="submit" name="setPin" class="btn inline-flex justify-center text-white bg-black-500">Set Pin</button>
+                                      </div>
+                                  </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+              </div>
+              <!-- Form Modal Area End -->
             </div>
           </div>
         </div>
       </div>
     </div>
-    <?php include USER_COMPONENTS_DIR."footer.php"; ?>
   </main>
 </body>
 

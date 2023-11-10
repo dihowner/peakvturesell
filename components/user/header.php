@@ -54,7 +54,7 @@
                                 <div class="flex ltr:text-left rtl:text-right">
                                     <div class="flex-none ltr:mr-3 rtl:ml-3">
                                     <div class="h-8 w-8 bg-white rounded-full">
-                                        <img src="assets/images/all-img/user.png" alt="user" class="border-white block w-full h-full object-cover rounded-full border">
+                                        <img src="<?php echo BASE_URL?>assets/images/all-img/user.png" alt="user" class="border-white block w-full h-full object-cover rounded-full border">
                                     </div>
                                     </div>
                                     <div class="flex-1">
@@ -73,7 +73,7 @@
                                 <div class="flex ltr:text-left rtl:text-right relative">
                                     <div class="flex-none ltr:mr-3 rtl:ml-3">
                                     <div class="h-8 w-8 bg-white rounded-full">
-                                        <img src="assets/images/all-img/user2.png" alt="user" class="border-transparent block w-full h-full object-cover rounded-full border">
+                                        <img src="<?php echo BASE_URL?>assets/images/all-img/user2.png" alt="user" class="border-transparent block w-full h-full object-cover rounded-full border">
                                     </div>
                                     </div>
                                     <div class="flex-1">
@@ -93,7 +93,7 @@
                             <div class="flex ltr:text-left rtl:text-right relative">
                                 <div class="flex-none ltr:mr-3 rtl:ml-3">
                                     <div class="h-8 w-8 bg-white rounded-full">
-                                    <img src="assets/images/all-img/user3.png" alt="user" class="border-transparent block w-full h-full object-cover rounded-full border">
+                                    <img src="<?php echo BASE_URL?>assets/images/all-img/user3.png" alt="user" class="border-transparent block w-full h-full object-cover rounded-full border">
                                     </div>
                                 </div>
                                 <div class="flex-1">
@@ -107,7 +107,7 @@
                             <div class="flex ltr:text-left rtl:text-right relative">
                                 <div class="flex-none ltr:mr-3 rtl:ml-3">
                                     <div class="h-8 w-8 bg-white rounded-full">
-                                        <img src="assets/images/all-img/user4.png" alt="user" class="border-transparent block w-full h-full object-cover rounded-full border">
+                                        <img src="<?php echo BASE_URL?>assets/images/all-img/user4.png" alt="user" class="border-transparent block w-full h-full object-cover rounded-full border">
                                     </div>
                                 </div>
                                 <div class="flex-1">

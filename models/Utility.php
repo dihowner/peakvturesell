@@ -19,6 +19,13 @@ class Utility extends Database {
         $sanitizedEmail = filter_var($validatedEmail, FILTER_SANITIZE_EMAIL);
         return $sanitizedEmail;
     }
+
+    public function validatePin(string $pin): bool {
+        if (mb_strlen($pin) == 4 AND is_numeric($pin) OR preg_match('/^[1-9]$/', $pin)) {
+            return true;
+        }        
+        return false;
+    }
     
     public function reformPhoneNumber(string $phoneNumber): string {
         $unwantedElement = array(' ', '+', '-');

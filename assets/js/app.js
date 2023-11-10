@@ -501,9 +501,10 @@
       name: {
         required: true
       },
-      number: {
+      newPin: {
         required: true,
-        number: true
+        number: true,
+        minlength: 4
       },
       Password: {
         required: true,

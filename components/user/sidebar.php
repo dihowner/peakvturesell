@@ -22,7 +22,7 @@
           <li class="sidebar-menu-title">MENU</li>
 
           <!-- Menu items -->
-          <li>
+          <li class="">
             <a href="<?php echo VIEW_DIR ?>dashboard" class="navItem <?php echo $activePage == 'dashboard' ? 'active': ''; ?>">
               <span class="flex items-center">
                 <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
@@ -31,7 +31,7 @@
             </a>
           </li>
 
-          <li>
+          <li class="">
             <a class="navItem">
               <span class="flex items-center">
                 <iconify-icon class="nav-icon" icon="heroicons-outline:chat"></iconify-icon>
@@ -40,7 +40,7 @@
             </a>
           </li>
 
-          <li>
+          <li class="">
             <a class="navItem">
               <span class="flex items-center">
                 <iconify-icon class="nav-icon" icon="heroicons-outline:chat"></iconify-icon>
@@ -100,23 +100,32 @@
           <!-- Account -->
           <li class="sidebar-menu-title">ACCOUNT</li>
 
-          <li class="">
-            <a href="<?php echo VIEW_DIR ?>profile" class="navItem <?php echo $activePage == 'profile' ? 'active': ''; ?>">
-              <span class="flex items-center">
-                <iconify-icon class="nav-icon" icon="heroicons-outline:mail"></iconify-icon>
-                <span>Profile</span>
-              </span>
-            </a>
-          </li>
-
           <li>
             <a href="#" class="navItem">
                <span class="flex items-center">
                   <iconify-icon class="nav-icon" icon="heroicons-outline:cog"></iconify-icon>
                   <span>Settings</span>
                </span>
+               <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
             </a>
-            </li>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="<?php echo VIEW_DIR ?>profile" class="navItem <?php echo $activePage == 'profile' ? 'active': ''; ?>">My Profile</a>
+              </li>
+              <li>
+                <a href="<?php echo VIEW_DIR ?>set-pin" class="navItem <?php echo $activePage == 'change-pin' ? 'active': ''; ?>">Transaction Pin</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="#" class="navItem">
+              <span class="flex items-center">
+                <iconify-icon class="nav-icon" icon="heroicons-outline:mail"></iconify-icon>
+                <span>Support</span>
+              </span>
+            </a>
+          </li>
         </ul>
 
         <!-- Upgrade Your Business Plan Card Start -->
