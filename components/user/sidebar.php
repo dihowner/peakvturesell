@@ -113,7 +113,7 @@
                 <a href="<?php echo VIEW_DIR ?>profile" class="navItem <?php echo $activePage == 'profile' ? 'active': ''; ?>">My Profile</a>
               </li>
               <li>
-                <a href="<?php echo VIEW_DIR ?>set-pin" class="navItem <?php echo $activePage == 'change-pin' ? 'active': ''; ?>">Transaction Pin</a>
+                <a href="<?php echo VIEW_DIR ?>transaction-pin" class="navItem <?php echo $activePage == 'transaction-pin' ? 'active': ''; ?>">Transaction Pin</a>
               </li>
             </ul>
           </li>

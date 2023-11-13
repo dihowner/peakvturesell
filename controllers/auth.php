@@ -32,7 +32,7 @@
             
             if($userCreated AND isset($_SESSION['user_id'])) {
                 // redirect user to change the default transaction pin
-                header("location: ".VIEW_DIR.'set-pin');
+                header("location: ".VIEW_DIR.'transaction-pin');
                 exit;
             } else {
                 // log feedback

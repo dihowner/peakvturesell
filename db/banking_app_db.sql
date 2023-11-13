@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2023 at 11:01 PM
+-- Generation Time: Nov 13, 2023 at 11:54 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,8 +43,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `phone`, `password`, `webhook_url`, `transact_pin`) VALUES
-(1, 'Zainab Ajumobi', 'zaenab', 'tester@test.com', '09079714162', '$2y$10$iEIQnqO7gvSXVxMjaGBSyOe19wqgMeY/lNLt.f3/y30SstfmE0cM6', NULL, '0000'),
-(2, 'John Doe', 'john', 'johndoe@gmail.com', '08012345678', '$2y$10$HHAzK655azCW2CDiqFVsxOQ23ffBVjtXqcbsFdHh5m1RB08/H7bde', NULL, '1456');
+(1, 'Zainab Ajumobi', 'zaenab', 'tester@test.com', '09079714162', '$2y$10$iEIQnqO7gvSXVxMjaGBSyOe19wqgMeY/lNLt.f3/y30SstfmE0cM6', NULL, '9100'),
+(2, 'John Doe', 'john', 'johndoe@gmail.com', '08012345678', '$2y$10$HHAzK655azCW2CDiqFVsxOQ23ffBVjtXqcbsFdHh5m1RB08/H7bde', NULL, '1717');
 
 --
 -- Indexes for dumped tables
