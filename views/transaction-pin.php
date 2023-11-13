@@ -232,8 +232,6 @@
         </main>
         </body>
     <?php    
-        header('location: '.VIEW_DIR.'dashboard');
-        exit;
     } else { ?>
         <!-- for other users, display the change transaction form -->
         <body class=" font-inter dashcode-app" id="body_class">

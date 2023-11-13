@@ -26,6 +26,14 @@ class Utility extends Database {
         }        
         return false;
     }
+
+    public function validatePassword(string $password): bool {
+        $check = preg_match('/[A-Za-z0-9_]/', $password) AND mb_strlen($password) >= 6;
+        if ($check) { 
+            return true;
+        }        
+        return false;
+    }
     
     public function reformPhoneNumber(string $phoneNumber): string {
         $unwantedElement = array(' ', '+', '-');

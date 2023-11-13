@@ -84,5 +84,20 @@
                 return false;
             }
         }
+
+        public function changePassword(string $id, string $password) : bool {
+            $condition = [
+                "id"=> $id
+            ];
+            $values = [
+                "password"=> $password
+            ];
+            $passwordChanged = $this->conn->update($this->table->users, $values, $condition);
+            if($passwordChanged) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>

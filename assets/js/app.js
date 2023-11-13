@@ -511,9 +511,13 @@
         number: true,
         minlength: 4
       },
-      Password: {
+      newPassword: {
         required: true,
-        minlength: 8
+        minlength: 6
+      },
+      confirmNewPassword: {
+        required: true,
+        minlength: 6
       },
       rangeType: {
         required: true,

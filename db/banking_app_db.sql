@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2023 at 11:54 AM
+-- Generation Time: Nov 13, 2023 at 04:57 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,7 +43,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `phone`, `password`, `webhook_url`, `transact_pin`) VALUES
-(1, 'Zainab Ajumobi', 'zaenab', 'tester@test.com', '09079714162', '$2y$10$iEIQnqO7gvSXVxMjaGBSyOe19wqgMeY/lNLt.f3/y30SstfmE0cM6', NULL, '9100'),
+(1, 'Zainab Ajumobi', 'zaenab', 'tester@test.com', '09079714162', '$2y$10$3UGkgnhhsdDupoZeqvaQoOid/.7ISfYmdfm2pF5FhwvhFzq6LKe46', NULL, '9100'),
 (2, 'John Doe', 'john', 'johndoe@gmail.com', '08012345678', '$2y$10$HHAzK655azCW2CDiqFVsxOQ23ffBVjtXqcbsFdHh5m1RB08/H7bde', NULL, '1717');
 
 --
