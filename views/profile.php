@@ -21,14 +21,15 @@
                     </a>
                   </li>
                   <li class="inline-block relative text-sm text-primary-500 font-Inter ">
-                    Account
+                    Settings
                     <iconify-icon icon="heroicons-outline:chevron-right" class="relative top-[3px] text-slate-500 rtl:rotate-180"></iconify-icon>
                   </li>
                   <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
                     Profile</li>
                 </ul>
               </div>
-              <!-- END: BreadCrumb -->
+              <!-- END: BreadCrumb -->              
+
               <div class="space-y-5 profile-page">
                 <div class="profiel-wrap px-[35px] pb-10 md:pt-[84px] pt-10 rounded-lg bg-white dark:bg-slate-800 lg:flex lg:space-y-0
                 space-y-6 justify-between items-end relative z-[1]">
@@ -68,33 +69,51 @@
                     <!-- end single -->
                     <div class="flex-1">
                       <div class="text-base text-slate-900 dark:text-slate-300 font-medium mb-1">
-                        200
+                        $18,680
                       </div>
                       <div class="text-sm text-slate-600 font-light dark:text-slate-300">
-                        Board Card
+                        Debits
                       </div>
                     </div>
                     <!-- end single -->
                     <div class="flex-1">
                       <div class="text-base text-slate-900 dark:text-slate-300 font-medium mb-1">
-                        3200
+                        $13,746
                       </div>
                       <div class="text-sm text-slate-600 font-light dark:text-slate-300">
-                        Calender Events
+                        Credits
                       </div>
                     </div>
                     <!-- end single -->
                   </div>
                   <!-- profile info-500 -->
                 </div>
+                <!-- Feedback and response messages -->
+                <div class="w-full md:w-1/2 d-flex mx-auto mb-2 justify-content-center relative">
+                    <?php echo errorMessage(); echo successMessage(); ?>
+                </div>
                 <div class="grid grid-cols-12 gap-6">
                   <div class="lg:col-span-4 col-span-12">
                     <div class="card h-full">
                       <header class="card-header">
-                        <h4 class="card-title">Info</h4>
+                        <h4 class="card-title">Your Profile</h4>
                       </header>
                       <div class="card-body p-6">
                         <ul class="list space-y-8">
+                          <li class="flex space-x-3 rtl:space-x-reverse">
+                            <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
+                              <iconify-icon icon="heroicons:map"></iconify-icon>
+                            </div>
+                            <div class="flex-1">
+                              <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                USERNAME
+                              </div>
+                              <div class="text-base text-slate-600 dark:text-slate-50">
+                                @<?php echo $userDetails['username'] ?>
+                              </div>
+                            </div>
+                          </li>
+                          <!-- end single list -->
                           <li class="flex space-x-3 rtl:space-x-reverse">
                             <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
                               <iconify-icon icon="heroicons:envelope"></iconify-icon>
@@ -123,33 +142,47 @@
                             </div>
                           </li>
                           <!-- end single list -->
-                          <li class="flex space-x-3 rtl:space-x-reverse">
-                            <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
-                              <iconify-icon icon="heroicons:map"></iconify-icon>
-                            </div>
-                            <div class="flex-1">
-                              <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
-                                LOCATION
-                              </div>
-                              <div class="text-base text-slate-600 dark:text-slate-50">
-                                ###
-                              </div>
-                            </div>
-                          </li>
-                          <!-- end single list -->
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="lg:col-span-8 col-span-12">
-                    <div class="card ">
+                    <div class="card h-full">
                       <header class="card-header">
-                        <h4 class="card-title">User Overview
+                        <h4 class="card-title">Profile Update
                         </h4>
                       </header>
-                      <div class="card-body">
-                        <div id="areaChart"></div>
+                      <div class="card-body p-6">                      
+                        <!-- Edit Profile -->
+                        <div class="list space-y-8 ">
+                          <form class="space-y-4" id="typeValidation" method="post" action="<?php echo CONTROLLER_DIR ?>updateAuth">
+                            <div class="input-area relative">
+                              <label for="largeInput" class="form-label">Username</label>
+                              <div class="relative">
+                                <input type="text" name="username" class="form-control !pl-9" placeholder="Full Name">
+                                <iconify-icon icon="heroicons-outline:user" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                              </div>
+                            </div>
+                            <div class="input-area relative">
+                              <label for="largeInput" class="form-label">Email</label>
+                              <div class="relative">
+                                <input type="email" name="email" class="form-control !pl-9" placeholder="Your Email">
+                                <iconify-icon icon="heroicons-outline:mail" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                              </div>
+                            </div>
+                            <div class="input-area relative">
+                              <label for="largeInput" class="form-label">Phone</label>
+                              <div class="relative">
+                                <input type="tel" name="phone" class="form-control !pl-9" placeholder="Phone Number" pattern="[0-9]">
+                                <iconify-icon icon="heroicons-outline:phone" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                              </div>
+                            </div>
+              
+                            <button name="updateProfile" class="btn inline-flex justify-center btn-dark">Submit</button>
+                          </form>
+                        </div>
                       </div>
+                      
                     </div>
                   </div>
                 </div>

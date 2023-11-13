@@ -267,18 +267,36 @@
   });
 
   // Password Show Hide Toggle
-  $("#toggleIcon").on("click", function () {
-    var x = $(".passwordfield").attr("type");
+  function togglePasswordIcon(el) {
+    var x = el.siblings('input').attr('type');
+    console.log('clicked');
+    console.log(el.siblings('input').attr('type'));
     if (x === "password") {
-      $(".passwordfield").prop("type", "text");
-      $("#hidePassword").hide();
-      $("#showPassword").show();
+      el.siblings('input').prop("type", "text");     
+      el.children("#hidePassword").hide();
+      el.children("#showPassword").show();
     } else {
-      $(".passwordfield").prop("type", "password");
-      $("#showPassword").hide();
-      $("#hidePassword").show();
+      el.siblings('input').prop("type", "password");
+      el.children("#showPassword").hide();
+      el.children("#hidePassword").show();
     }
+  }
+
+  $("#toggleIcon1").on("click", function () { 
+    var x = $(this);
+    togglePasswordIcon(x);
   });
+
+  $("#toggleIcon2").on("click", function () { 
+    var y = $(this);
+    togglePasswordIcon(y);
+  });
+
+  $("#toggleIcon3").on("click", function () { 
+    var z = $(this);
+    togglePasswordIcon(z);
+  })
+
 
   // Getting the Current Year
   $("#thisYear").text(new Date().getFullYear());
@@ -436,7 +454,7 @@
   // function to validate password
   function isValidPassword(password) {
     // password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number
-    var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$/;
+    var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{5,}$/;
     return passwordRegex.test(password);
   }
   $("#tooltipValidation").validate({
@@ -513,11 +531,11 @@
       },
       newPassword: {
         required: true,
-        minlength: 6
+        minlength: 5
       },
       confirmNewPassword: {
         required: true,
-        minlength: 6
+        minlength: 5
       },
       rangeType: {
         required: true,
