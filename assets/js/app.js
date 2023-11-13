@@ -506,6 +506,11 @@
         number: true,
         minlength: 4
       },
+      oldPin: {
+        required: true,
+        number: true,
+        minlength: 4
+      },
       Password: {
         required: true,
         minlength: 8
@@ -784,7 +789,7 @@
     });
   });
   var swiper = new Swiper(".card-slider", {
-    effect: "cards",
+    effect: "slide",
     grabCursor: true
   });
 
