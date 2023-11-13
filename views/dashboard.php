@@ -315,7 +315,7 @@
                                                     <td class="table-td">
                                                         <span class="flex">
                                                             <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-                                                                <img src="assets/images/all-img/customer_1.png" alt="1" class="object-cover w-full h-full rounded-full">
+                                                                <img src="<?php echo BASE_URL ?>assets/images/all-img/customer_1.png" alt="1" class="object-cover w-full h-full rounded-full">
                                                             </span>
                                                         <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Jenny Wilson</span>
                                                         </span>
@@ -371,7 +371,7 @@
                                                     <td class="table-td">
                                                         <span class="flex">
                                                             <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-                                                                <img src="assets/images/all-img/customer_1.png" alt="2" class="object-cover w-full h-full rounded-full">
+                                                                <img src="<?php echo BASE_URL ?>assets/images/all-img/customer_1.png" alt="2" class="object-cover w-full h-full rounded-full">
                                                             </span>
                                                         <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Jenny Wilson</span>
                                                         </span>
@@ -427,7 +427,7 @@
                                                     <td class="table-td">
                                                         <span class="flex">
                                                             <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-                                                                <img src="assets/images/all-img/customer_1.png" alt="3" class="object-cover w-full h-full rounded-full">
+                                                                <img src="<?php echo BASE_URL ?>assets/images/all-img/customer_1.png" alt="3" class="object-cover w-full h-full rounded-full">
                                                             </span>
                                                         <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Jenny Wilson</span>
                                                         </span>

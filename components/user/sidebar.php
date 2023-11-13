@@ -115,6 +115,9 @@
               <li>
                 <a href="<?php echo VIEW_DIR ?>transaction-pin" class="navItem <?php echo $activePage == 'transaction-pin' ? 'active': ''; ?>">Transaction Pin</a>
               </li>
+              <li>
+                <a href="<?php echo VIEW_DIR ?>password" class="navItem <?php echo $activePage == 'password' ? 'active': ''; ?>">Password</a>
+              </li>
             </ul>
           </li>
 
