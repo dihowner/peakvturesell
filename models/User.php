@@ -48,6 +48,15 @@
             return $userInfo;
         }
 
+        public function updateUserInfo(array $updateData, array $whereClause): bool {
+            $updated = $this->conn->update($this->table->users, $updateData, $whereClause);
+            if($updated) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         public function searchUser(string $column, string $value) : bool { 
             $getRecord = $this->conn->getSingleRecord($this->table->users, "*", " AND $column = '$value'");
             if($getRecord != NULL) {
@@ -70,34 +79,5 @@
             return $name;
         }
 
-        public function setTransactionPin(string $id, string $pin) : bool {
-            $condition = [
-                "id"=> $id
-            ];
-            $values = [
-                "transact_pin"=> $pin
-            ];
-            $pinSet = $this->conn->update($this->table->users, $values, $condition);
-            if($pinSet) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        public function changePassword(string $id, string $password) : bool {
-            $condition = [
-                "id"=> $id
-            ];
-            $values = [
-                "password"=> $password
-            ];
-            $passwordChanged = $this->conn->update($this->table->users, $values, $condition);
-            if($passwordChanged) {
-                return true;
-            } else {
-                return false;
-            }
-        }
     }
 ?>

@@ -38,17 +38,21 @@
             <!-- Login Form -->
             <form class="space-y-4" method="post" action="<?php echo CONTROLLER_DIR;?>auth.php">
               <div class="fromGroup">
-                <label class="block capitalize form-label">Your detail</label>
-                <div class="relative ">
-                  <input type="text" name="detail" class="form-control py-2" placeholder="Email Address / Phone Number / Username">
+                <label for="detail" class="block capitalize form-label">Your detail</label>
+                <div class="relative" id="passwordInputField">
+                  <input id="detail" type="text" name="detail" class="form-control py-2" placeholder="Email Address / Phone Number / Username">
                 </div>
               </div>
 
               <div class="fromGroup">
-                <label class="block capitalize form-label">Password</label>
-                <div class="relative ">
-                  <input type="password" name="password" class="form-control py-2" placeholder="john123">
-                </div>
+                <label for="newPassword" class="block capitalize form-label">Password</label>
+                <div class="relative" id="passwordInputField">
+                  <input id="newPassword" type="password" name="password" class="passwordfield form-control py-2" placeholder="Password">
+                  <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon1">
+                    <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
+                    <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
+                  </span>
+                </div>                         
               </div>
 
               <div class="flex justify-between">

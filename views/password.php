@@ -50,7 +50,7 @@
                                     <div class="relative" id="passwordInputField">
                                         <input id="oldPassword" type="password" name="oldPassword" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 pr-9 focus:!outline-none
                                             focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Enter former password" autocomplete="off" autofocus required> 
-                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon1">
                                             <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                             <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                         </span>
@@ -62,7 +62,7 @@
                                     <div class="relative" id="passwordInputField">
                                         <input id="newPassword" type="password" name="newPassword" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 focus:!outline-none 
                                             focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Enter new password" autocomplete="off" autofocus required>
-                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon2">
                                             <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                             <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                         </span>
@@ -74,7 +74,7 @@
                                     <div class="relative" id="passwordInputField">
                                         <input id="confirmNewPassword" type="password" name="confirmNewPassword" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 focus:!outline-none 
                                             focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Confirm password" autocomplete="off" autofocus required>
-                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon3">
                                             <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                             <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                         </span>
@@ -86,7 +86,7 @@
                             </div>
                         </form>
                     </div>
-                    </div>
+                </div>
 
                 </div>
             </div>

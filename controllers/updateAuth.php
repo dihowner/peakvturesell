@@ -11,7 +11,13 @@
         } else if ($userPin == "0000") {
             $_SESSION['error_message'] = "Default pin cannot be used as your transaction pin!";
         } else {
-            $pinSet = $user->setTransactionPin($userId, $userPin);
+            $values = [
+                "transact_pin"=> $userPin
+            ];
+            $condition = [
+                "id"=> $userId
+            ];
+            $pinSet = $user->updateUserInfo($values, $condition);
             
             if($pinSet) {
                 // redirect user to the dashboard
@@ -49,7 +55,13 @@
         } else if ($userDetails['transact_pin'] != $oldPin) {
             $_SESSION['error_message'] = "Old pin is incorrect!";
         } else {
-            $pinSet = $user->setTransactionPin($userId, $newPin);
+            $values = [
+                "transact_pin"=> $newPin
+            ];
+            $condition = [
+                "id"=> $userId
+            ];
+            $pinSet = $user->updateUserInfo($values, $condition);
         
             if($pinSet) {
                 // log success feedback
@@ -91,7 +103,13 @@
         } else {
             // hash the new password and call the change password method
             $password = $user->hashPassword($newPassword);
-            $passwordChanged = $user->changePassword($userId, $password);
+            $values = [
+                "password"=> $password
+            ];
+            $condition = [
+                "id"=> $userId
+            ];
+            $passwordChanged = $user->updateUserInfo($values, $condition);
         
             if($passwordChanged) {
                 // log success feedback

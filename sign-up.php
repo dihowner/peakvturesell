@@ -31,37 +31,41 @@
             <!-- Registration Form -->
             <form class="space-y-4" method="post" action="<?php echo CONTROLLER_DIR;?>auth.php">
               <div class="fromGroup">
-                <label class="block capitalize form-label">Name</label>
+                <label for="name" class="block capitalize form-label">Name</label>
                 <div class="relative ">
-                  <input type="text" name="name" class="form-control py-2" placeholder="Your name">
+                  <input id="name" type="text" name="name" class="form-control py-2" placeholder="Your name">
                 </div>
               </div>
 
               <div class="fromGroup">
-                <label class="block capitalize form-label">Username</label>
+                <label for="username" class="block capitalize form-label">Username</label>
                 <div class="relative ">
-                  <input type="text" name="username" class="form-control py-2" placeholder="Your name">
+                  <input id="username" type="text" name="username" class="form-control py-2" placeholder="Your username">
                 </div>
               </div>
 
               <div class="fromGroup">
-                <label class="block capitalize form-label">Email Address</label>
+                <label for="email" class="block capitalize form-label">Email Address</label>
                 <div class="relative ">
-                  <input type="email" name="email" class="form-control py-2" placeholder="Your email">
+                  <input id="email" type="email" name="email" class="form-control py-2" placeholder="Your email">
                 </div>
               </div>
 
               <div class="fromGroup">
-                <label class="block capitalize form-label">Phone Number</label>
+                <label for="phone" class="block capitalize form-label">Phone Number</label>
                 <div class="relative ">
-                  <input inputmode="numeric" name="phone" class="form-control py-2" placeholder="Your Phone">
+                  <input id="phone" inputmode="numeric" name="phone" class="form-control py-2" placeholder="Your Phone">
                 </div>
               </div>
 
               <div class="fromGroup">
-                <label class="block capitalize form-label">Password</label>
-                <div class="relative ">
-                  <input type="password" name="password" class="form-control py-2" placeholder="Add password">
+                <label for="newPassword" class="block capitalize form-label">Password</label>
+                <div class="relative" id="passwordInputField">
+                  <input id="newPassword" type="password" name="password" class="passwordfield form-control py-2" placeholder="Add password">
+                  <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon1">
+                    <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
+                    <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
+                  </span>
                 </div>
               </div>
 
