@@ -14038,6 +14038,9 @@ ul.custom-list ul li{
   .md\:max-w-\[345px\]{
     max-width: 345px;
   }
+  .md\:w-1\/2, .set{
+    width: 50%;
+  }
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
