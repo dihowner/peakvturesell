@@ -130,7 +130,6 @@
                                                 </div>
                                             </div>
 
-
                                             <div class="swiper-slide">
                                                 <div class="from-[#4C33F7] to-[#801FE0]  h-[200px] bg-gradient-to-r relative rounded-md z-[1] p-4 text-white">
                                                 <div class="overlay absolute left-0 top-0 h-full w-full -z-[1]">
@@ -382,6 +381,7 @@
                                                         <span class="text-slate-500 dark:text-slate-400">
                                                                 <span class="block text-slate-600 dark:text-slate-300">Transfer</span>
                                                         <span class="block text-slate-500 text-xs">Trans ID: 8HG654Pk32</span>
+
                                                         </span>
                                                         </div>
                                                     </td>
