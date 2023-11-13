@@ -187,7 +187,7 @@
                                         <!-- Modal body -->
                                         <div>
                                         <!-- Feedback and response messages -->
-                                        <div class="w-full d-flex mx-auto mb-2 justify-content-center relative">
+                                        <div class="w-full md:w-1/2 d-flex mx-auto mb-2 justify-content-center relative">
                                             <?php echo errorMessage(); echo successMessage(); ?>
                                         </div>
                                         
@@ -205,7 +205,7 @@
                                                     <div class="relative" id="passwordInputField">
                                                         <input id="newPin" type="password" inputmode="numeric"  name="newPin" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 focus:!outline-none 
                                                             focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Enter your new pin" autocomplete="off">
-                                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                                        <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon1">
                                                             <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                                             <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                                         </span>
@@ -260,7 +260,7 @@
                         <!-- END: BreadCrumb -->
                         
                         <!-- Feedback and response messages -->
-                        <div class="w-full d-flex mx-auto mb-2 justify-content-center relative">
+                        <div class="w-full md:w-1/2 d-flex mx-auto mb-2 justify-content-center relative">
                             <?php echo errorMessage(); echo successMessage(); ?>
                         </div>
                         
@@ -280,7 +280,7 @@
                                         <div class="relative" id="passwordInputField">
                                             <input id="oldPin" type="password" inputmode="numeric" name="oldPin" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 pr-9 focus:!outline-none
                                                 focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Your former pin" autocomplete="off" autofocus required> 
-                                            <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                            <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon1">
                                                 <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                                 <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                             </span>
@@ -292,7 +292,7 @@
                                         <div class="relative" id="passwordInputField">
                                             <input id="newPin" type="password" inputmode="numeric"  name="newPin" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 focus:!outline-none 
                                                 focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Enter your new pin" autocomplete="off" autofocus required>
-                                            <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                            <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon2">
                                                 <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                                 <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                             </span>
@@ -304,7 +304,7 @@
                                         <div class="relative" id="passwordInputField">
                                             <input id="confirmNewPin" type="password" inputmode="numeric"  name="confirmNewPin" class="passwordfield text-sm font-Inter font-normal text-slate-600 block w-full py-3 px-4 focus:!outline-none 
                                                 focus:!ring-0 border !border-slate-400 rounded-md mt-2" placeholder="Confirm your new pin" autocomplete="off" autofocus required>
-                                            <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon">
+                                            <span class="text-xl text-slate-400 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer" id="toggleIcon3">
                                                 <iconify-icon id="hidePassword" icon="heroicons-outline:eye-off"></iconify-icon>
                                                 <iconify-icon class="hidden" id="showPassword" icon="heroicons-outline:eye"></iconify-icon>
                                             </span>
@@ -317,7 +317,7 @@
                                 </div>
                             </form>
                             </div>
-                            </div>
+                        </div>
 
                         </div>
                     </div>
