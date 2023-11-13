@@ -11,7 +11,7 @@
     $userDetails = $user->getUserInfo($userId);
 
     if($userDetails['transact_pin'] == "0000") {
-        header('location: '.VIEW_DIR.'set-pin');
+        header('location: '.VIEW_DIR.'transaction-pin');
         exit;
     }
 ?>

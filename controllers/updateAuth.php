@@ -66,6 +66,48 @@
         header("location: ".HTTP_REFERER);
         exit;
     }
+    else if(isset($_POST['changePassword'])) {
+        // get password details from user input       
+        $oldPassword = htmlspecialchars(trim($_POST['oldPassword']));
+        $newPassword = htmlspecialchars(trim($_POST['newPassword']));
+        $confirmNewPassword = htmlspecialchars(trim($_POST['confirmNewPassword']));
+
+        // get user id and user details
+        $userId = $_SESSION['user_id'];
+        $userDetails = $user->getUserInfo($userId);
+        $savedPassword = $userDetails['password'];
+
+        // perform checks against user input
+        if($oldPassword == "" OR $newPassword == "" OR $confirmNewPassword == "") {
+            $_SESSION['error_message'] = "Fields cannot be blank!";
+        } else if (!$user->validatePassword($oldPassword) OR !$user->validatePassword($newPassword) OR !$user->validatePassword($confirmNewPassword)) {
+            $_SESSION['error_message'] = "Enter a valid password consisting of 6 or more characters!";
+        } else if ($newPassword == $oldPassword){
+            $_SESSION['error_message'] = "You have to specify a new password!";
+        } else if ($confirmNewPassword != $newPassword){
+            $_SESSION['error_message'] = "Please confirm your new password!";
+        } else if (!$user->checkPassword($oldPassword, $savedPassword)) {
+            $_SESSION['error_message'] = "You've entered an incorrect password!";
+        } else {
+            // hash the new password and call the change password method
+            $password = $user->hashPassword($newPassword);
+            $passwordChanged = $user->changePassword($userId, $password);
+        
+            if($passwordChanged) {
+                // log success feedback
+                $_SESSION['success_message'] = "Your password has been successfully changed!";
+                header("location: ".HTTP_REFERER);
+                exit;
+            } else {
+                // log error feedback
+                $_SESSION['error_message'] = "Unable to change account password, please try again!";
+                header("location: ".HTTP_REFERER);
+                exit;
+            }
+        }
+        header("location: ".HTTP_REFERER);
+        exit;
+    }
     else {
         header("location: ".BASE_URL);
         exit;
