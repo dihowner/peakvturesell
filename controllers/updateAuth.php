@@ -126,6 +126,57 @@
         header("location: ".HTTP_REFERER);
         exit;
     }
+    else if(isset($_POST['updateProfile'])) {
+        // get user details from input       
+        $username = htmlspecialchars(trim($_POST['username']));
+        $email = htmlspecialchars(trim($_POST['email']));
+        $phone = htmlspecialchars(trim($_POST['phone']));
+
+        // get user id and user details
+        $userId = $_SESSION['user_id'];
+        $userDetails = $user->getUserInfo($userId);
+        $oldUsername = $userDetails['username'];
+        $oldEmail = $userDetails['email'];
+        $oldPhone = $userDetails['phone'];
+
+        // perform checks against user input
+        if(!$username OR !$email OR !$phone OR $username == "" OR $email == "" OR $phone == "") {
+            $_SESSION['error_message'] = "Fields cannot be blank!";
+        } else if ($username == $oldUsername AND $email == $oldEmail AND $phone == $oldPhone){
+            $_SESSION['error_message'] = "Update at least one field!";
+        } else {
+            // Check which fields were updated and add them to values array
+            $values = [];
+            if ($username != $oldUsername) {
+                $values["username"] = $username;
+            }
+            if ($email != $oldEmail) {
+                $values["email"] = $email;
+            }
+            if($phone != $oldPhone) {
+                $values["phone"] = $phone;
+            }
+            // save user id in an array
+            $condition = [
+                "id"=> $userId
+            ];
+            $profileUpdated = $user->updateUserInfo($values, $condition);
+        
+            if($profileUpdated) {
+                // log success feedback
+                $_SESSION['success_message'] = "Your profile has been successfully updated!";
+                header("location: ".HTTP_REFERER);
+                exit;
+            } else {
+                // log error feedback
+                $_SESSION['error_message'] = "Unable to update profile, please try again!";
+                header("location: ".HTTP_REFERER);
+                exit;
+            }
+        }
+        header("location: ".HTTP_REFERER);
+        exit;
+    }
     else {
         header("location: ".BASE_URL);
         exit;
