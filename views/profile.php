@@ -92,11 +92,13 @@
                 <div class="w-full md:w-1/2 d-flex mx-auto mb-2 justify-content-center relative">
                     <?php echo errorMessage(); echo successMessage(); ?>
                 </div>
-                <div class="grid grid-cols-12 gap-6">
+
+                <!-- User Profile Info -->
+                <!-- <div class="grid grid-cols-12 gap-6 justify-center">
                   <div class="lg:col-span-4 col-span-12">
                     <div class="card h-full">
                       <header class="card-header">
-                        <h4 class="card-title">Your Profile</h4>
+                        <h4 class="card-title">Profile Info</h4>
                       </header>
                       <div class="card-body p-6">
                         <ul class="list space-y-8">
@@ -113,7 +115,7 @@
                               </div>
                             </div>
                           </li>
-                          <!-- end single list -->
+                          
                           <li class="flex space-x-3 rtl:space-x-reverse">
                             <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
                               <iconify-icon icon="heroicons:envelope"></iconify-icon>
@@ -127,7 +129,7 @@
                               </a>
                             </div>
                           </li>
-                          <!-- end single list -->
+                          
                           <li class="flex space-x-3 rtl:space-x-reverse">
                             <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
                               <iconify-icon icon="heroicons:phone-arrow-up-right"></iconify-icon>
@@ -141,48 +143,49 @@
                               </a>
                             </div>
                           </li>
-                          <!-- end single list -->
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="lg:col-span-8 col-span-12">
-                    <div class="card h-full">
-                      <header class="card-header">
-                        <h4 class="card-title">Profile Update
-                        </h4>
-                      </header>
-                      <div class="card-body p-6">                      
-                        <!-- Edit Profile -->
-                        <div class="list space-y-8 ">
-                          <form class="space-y-4" id="typeValidation" method="post" action="<?php echo CONTROLLER_DIR ?>updateAuth">
-                            <div class="input-area relative">
-                              <label for="largeInput" class="form-label">Username</label>
-                              <div class="relative">
-                                <input type="text" name="username" class="form-control !pl-9" placeholder="Full Name">
-                                <iconify-icon icon="heroicons-outline:user" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
-                              </div>
-                            </div>
-                            <div class="input-area relative">
-                              <label for="largeInput" class="form-label">Email</label>
-                              <div class="relative">
-                                <input type="email" name="email" class="form-control !pl-9" placeholder="Your Email">
-                                <iconify-icon icon="heroicons-outline:mail" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
-                              </div>
-                            </div>
-                            <div class="input-area relative">
-                              <label for="largeInput" class="form-label">Phone</label>
-                              <div class="relative">
-                                <input type="tel" name="phone" class="form-control !pl-9" placeholder="Phone Number" pattern="[0-9]">
-                                <iconify-icon icon="heroicons-outline:phone" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
-                              </div>
-                            </div>
-              
-                            <button name="updateProfile" class="btn inline-flex justify-center btn-dark">Submit</button>
-                          </form>
-                        </div>
+                </div> -->
+
+                <!-- Update Profile -->
+                <div class="card w-full md:w-1/2 mx-auto set">
+                  <div class="card-body flex flex-col p-6">
+                    <header class="flex mb-5 items-center border-b border-slate-100 dark:border-slate-700 pb-5 -mx-6 px-6">
+                      <div class="flex1">
+                        <div class="card-title text-slate-900 dark:text-white">Update Profile </div>
                       </div>
-                      
+                    </header>
+                    <div class="card-body p-4">                      
+                      <!-- Edit Profile -->
+                      <div class="list space-y-8 ">
+                        <form class="space-y-4" id="typeValidation" method="post" action="<?php echo CONTROLLER_DIR ?>updateAuth">
+                          <div class="input-area relative">
+                            <label for="largeInput" class="form-label">Username</label>
+                            <div class="relative">
+                              <input type="text" name="username" class="form-control !pl-9 checkInteraction"  value="<?php echo $userDetails['username'] ?>">
+                              <iconify-icon icon="heroicons-outline:user" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                            </div>
+                          </div>
+                          <div class="input-area relative">
+                            <label for="largeInput" class="form-label">Email</label>
+                            <div class="relative">
+                              <input type="email" name="email" class="form-control !pl-9 checkInteraction" value="<?php echo $userDetails['email'] ?>">
+                              <iconify-icon icon="heroicons-outline:mail" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                            </div>
+                          </div>
+                          <div class="input-area relative">
+                            <label for="largeInput" class="form-label">Phone</label>
+                            <div class="relative">
+                              <input type="tel" name="phone" class="form-control !pl-9 checkInteraction" value="<?php echo $userDetails['phone'] ?>" pattern="[0-9]">
+                              <iconify-icon icon="heroicons-outline:phone" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                            </div>
+                          </div>
+            
+                          <button name="updateProfile" class="btn inline-flex justify-center btn-dark cursor-not-allowed light checkInteractionBtn" disabled>Submit</button>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>

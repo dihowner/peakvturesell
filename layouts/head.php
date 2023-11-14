@@ -7,7 +7,7 @@
 
         <title><?php echo BRAND_NAME;?> - <?php echo PAGE_TITLE;?></title>
 
-        <link rel="shortcut icon" type="image/png" href="assets/images/logo/favicon.svg">
+        <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL;?>assets/images/logo/favicon.svg">
 
         <link rel="google fonts" href="https://fonts.googleapis.com/">
 
