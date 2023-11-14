@@ -295,8 +295,12 @@
   $("#toggleIcon3").on("click", function () { 
     var z = $(this);
     togglePasswordIcon(z);
-  })
+  });
 
+  // check if user has interacted with form input
+  $('.checkInteraction').on('change keydown paste textInput input', function (){
+    $('.checkInteractionBtn').removeClass("cursor-not-allowed light").removeAttr("disabled");
+  });
 
   // Getting the Current Year
   $("#thisYear").text(new Date().getFullYear());
